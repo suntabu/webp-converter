@@ -106,12 +106,12 @@ class Converter:
             return RESULT_FAILED, 0
 
         _reduce_size = size_diff(image_file_path, swap_webp_path)
-        if _reduce_size < 0:
-            # invalid convert
-            print_process(
-                'NOT convert ' + image_file_name + ' because the webp one is larger: ' + (-_reduce_size).__str__())
-            remove(swap_webp_path)
-            return RESULT_WEBP_LARGER, 0
+#        if _reduce_size < 0:
+#            # invalid convert
+#            print_process(
+#                'NOT convert ' + image_file_name + ' because the webp one is larger: ' + (-_reduce_size).__str__())
+#            remove(swap_webp_path)
+#            return RESULT_WEBP_LARGER, 0
 
         print_process('convert ' + image_file_name + ' and reduce size: ' + _reduce_size.__str__())
         rename(swap_webp_path, webp_file_path)

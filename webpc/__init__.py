@@ -178,7 +178,7 @@ def loop(input_directory, output_directory, swap_webp_path, transparency_image_p
         for file_name in files:
             if file_name == '.DS_Store':
                 continue
-            if not file_name.endswith('.jpg') and not file_name.endswith('.png'):
+            if not file_name.lower().endswith('.jpg') and not file_name.lower().endswith('.png'):
                 continue
 
             if output_directory in subdir:
